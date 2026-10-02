@@ -1,0 +1,41 @@
+{
+  "title": "Phase 2 Foundations",
+  "diagrams": [
+    {
+      "file": "00-overview.excalidraw",
+      "title": "Phase 2 Foundations: how the 8 areas connect"
+    },
+    {
+      "file": "01-token-tiers-naming.excalidraw",
+      "title": "Token tiers & naming"
+    },
+    {
+      "file": "02-source-of-truth-export.excalidraw",
+      "title": "Source of truth & export"
+    },
+    {
+      "file": "03-pipeline.excalidraw",
+      "title": "The pipeline"
+    },
+    {
+      "file": "04-theming-model-aem.excalidraw",
+      "title": "Theming model in AEM"
+    },
+    {
+      "file": "05-components-consume-tokens.excalidraw",
+      "title": "How components consume tokens"
+    },
+    {
+      "file": "06-fonts-languages-grid-icons.excalidraw",
+      "title": "Fonts, languages, grid & icons"
+    },
+    {
+      "file": "07-accessibility-tokens.excalidraw",
+      "title": "Accessibility at the token level"
+    },
+    {
+      "file": "08-adrs.excalidraw",
+      "title": "Architecture decision records (ADRs)"
+    }
+  ]
+}

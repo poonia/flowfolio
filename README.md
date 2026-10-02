@@ -10,7 +10,7 @@ A GitHub Pages app for browsing and editing diagrams. Every diagram in
 | HTML page | `.html` | Code editor + sandboxed live preview |
 
 Mermaid and HTML have **Code / Split / Preview** views. Links are shareable:
-`…/#/phase2-diagrams/excalidraw/00-overview`.
+`…/#/00-overview`.
 
 ## Editing and saving
 
@@ -22,10 +22,10 @@ the browser that you can download and add to the repo.
 
 ## Adding diagrams
 
-Drop files anywhere under `diagrams/`. The top-level folder becomes a group in
-the side panel. Titles come from, in order:
+Put diagram files directly in `diagrams/`. Titles come from, in order:
 
-1. the folder's `manifest.json` (`diagrams[].title`, matched by file path),
+1. `diagrams/manifest.json` (`diagrams[].title`, matched by `file`; its
+   top-level `title` names the side-panel group),
 2. `<title>` for HTML, a `%% title: …` line for Mermaid,
 3. the file name.
 
