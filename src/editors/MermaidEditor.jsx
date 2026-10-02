@@ -40,6 +40,11 @@ export default function MermaidEditor({ initial, onChange, theme, view }) {
     return () => clearTimeout(t);
   }, [code, theme]);
 
+  // A diagram that sets its own light theme (frontmatter `theme:` or %%{init})
+  // needs a light canvas even when the app is in dark mode.
+  const ownTheme = code.match(/["']?theme["']?\s*:\s*["']?([\w-]+)/)?.[1];
+  const lightCanvas = ownTheme && !ownTheme.includes('dark');
+
   return (
     <CodeSplit
       value={code}
@@ -48,7 +53,7 @@ export default function MermaidEditor({ initial, onChange, theme, view }) {
       theme={theme}
       view={view}
     >
-      <div className="mermaid-preview">
+      <div className={`mermaid-preview ${lightCanvas ? 'light' : ''}`}>
         <div className="zoom">
           <button onClick={() => setZoom((z) => Math.max(0.25, (z === 'fit' ? 1 : z) - 0.25))} aria-label="Zoom out">−</button>
           <button onClick={() => setZoom((z) => (z === 'fit' ? 1 : 'fit'))} title="Toggle fit / 100%">

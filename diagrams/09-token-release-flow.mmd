@@ -1,0 +1,20 @@
+---
+title: Token release flow (Mermaid)
+config:
+  theme: redux-color
+  look: handDrawn
+---
+flowchart TB
+  subgraph Design
+    A[Edit variables in Figma] --> B[Export tokens JSON]
+  end
+  subgraph Build
+    C[Style Dictionary build] --> D{Contrast checks pass?}
+  end
+  subgraph Release
+    E[Publish CSS variables] --> F[AEM clientlib]
+    F --> G((Live))
+  end
+  B --> C
+  D -- yes --> E
+  D -- no --> A
